@@ -1,10 +1,11 @@
-import { useState } from "react";
 import { ButtonRemove } from "./button.js";
+import { ToastRemoveAll } from "../Toastify/ToastyRemoveAll.jsx";
 
 function ButtonRemoveAll({ setCurrentSale, setCartTotal }) {
   function resetCartTotal() {
     setCurrentSale([]);
     setCartTotal(0);
+    ToastRemoveAll();
   }
 
   return (
@@ -15,6 +16,3 @@ function ButtonRemoveAll({ setCurrentSale, setCartTotal }) {
 }
 
 export default ButtonRemoveAll;
-
-// Como zerar a soma total quando eu clico em remover todos os itens?
-// O React não permite dois eventos de clique na mesma tag

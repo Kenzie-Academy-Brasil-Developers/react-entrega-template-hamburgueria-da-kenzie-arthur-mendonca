@@ -1,3 +1,4 @@
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import api from "./components/services/api";
@@ -5,6 +6,9 @@ import ProductsList from "./components/productsList/productsList.jsx";
 import Header from "./components/header/header.jsx";
 import { AppStyle } from "./AppStyle";
 import Cart from "./components/cart/cart.jsx";
+import { ToastContainer } from "react-toastify";
+import { ToastySuccess } from "./components/Toastify/Toastify";
+import { ToastInfo } from "./components/Toastify/ToastifyDelete";
 
 function App() {
   const [products, setProducts] = useState([]); // lista de produtos recebida pela API
@@ -16,13 +20,19 @@ function App() {
     if (!currentSale.find((food) => food.id === element.id)) {
       setCurrentSale([...currentSale, element]);
       setCartTotal(cartTotal + element.price);
+      ToastySuccess(element.name);
     }
   }
 
   function removeFoodFromCart(id) {
     const filtered = currentSale.filter((food) => food.id !== id);
     const subtract = currentSale.find((food) => food.id === id);
+    const subtractedName = currentSale
+      .filter((food) => food.id === id)
+      .find((food) => food.name);
 
+    console.log(subtractedName.name);
+    ToastInfo(`Você removeu ${subtractedName.name}`);
     setCartTotal(cartTotal - subtract.price);
     return setCurrentSale(filtered);
   }
@@ -57,6 +67,7 @@ function App() {
           setCurrentSale={setCurrentSale}
         />
       </div>
+      <ToastContainer />
     </AppStyle>
   );
 }
