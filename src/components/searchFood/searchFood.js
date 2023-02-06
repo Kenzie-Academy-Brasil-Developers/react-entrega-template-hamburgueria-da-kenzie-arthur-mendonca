@@ -60,6 +60,10 @@ export const StyledSectionSearch = styled.ul`
     button:hover {
       filter: brightness(1.1);
     }
+
+    html {
+      font-family: "Inter", sans-serif;
+    }
   }
 
   @media (min-width: 426px) {

@@ -37,6 +37,10 @@ export const StyledCartList = styled.ul`
     }
   }
 
+  html {
+    font-family: "Inter", sans-serif;
+  }
+
   @media (min-width: 426px) {
   }
 `;

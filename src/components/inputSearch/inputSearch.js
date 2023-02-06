@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+  html {
+    font-family: "Inter", sans-serif;
+  }
+
   display: flex;
+
   input {
     padding: 20px 190px 20px 10px;
     border-radius: 10px;

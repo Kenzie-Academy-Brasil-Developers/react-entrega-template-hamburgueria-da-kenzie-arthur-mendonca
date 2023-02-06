@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import "../../global/global.css";
-import "../../global/reset.css";
 
 export const StyledHeader = styled.header`
   width: 100%;
@@ -18,6 +16,12 @@ export const StyledHeader = styled.header`
     img {
       width: 60%;
     }
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+  html {
+    font-family: "Inter", sans-serif;
   }
 
   @media (min-width: 426px) {

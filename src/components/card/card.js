@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import "../../global/global.css";
-import "../../global/reset.css";
 
 export const StyledSection = styled.section`
   width: 100%;
@@ -11,6 +9,10 @@ export const StyledSection = styled.section`
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  html {
+    font-family: "Inter", sans-serif;
   }
 `;
 
@@ -76,4 +78,8 @@ export const StyledCard = styled.ul`
       font-weight: bold;
     }
   }
+  html {
+    font-family: "Inter", sans-serif;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 `;
