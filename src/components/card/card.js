@@ -10,10 +10,6 @@ export const StyledSection = styled.section`
     margin: 0;
     padding: 0;
   }
-
-  html {
-    font-family: "Inter", sans-serif;
-  }
 `;
 
 export const StyledCard = styled.ul`
@@ -78,8 +74,6 @@ export const StyledCard = styled.ul`
       font-weight: bold;
     }
   }
-  html {
-    font-family: "Inter", sans-serif;
-  }
+
   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 `;

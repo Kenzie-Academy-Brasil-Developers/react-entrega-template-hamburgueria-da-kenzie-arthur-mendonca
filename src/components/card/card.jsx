@@ -1,5 +1,5 @@
-import { StyledCard } from "./card";
-import { StyledSection } from "./card";
+import { StyledCard } from "./card.js";
+import { StyledSection } from "./card.js";
 import SearchFood from "../searchFood/searchFood.jsx";
 
 function Card({ products, addFoodToCart, searchResult }) {
