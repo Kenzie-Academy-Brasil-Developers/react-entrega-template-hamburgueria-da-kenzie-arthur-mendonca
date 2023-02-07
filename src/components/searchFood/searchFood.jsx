@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyledSectionSearch } from "../searchFood/searchFood";
+import { StyledSectionSearch } from "../searchFood/searchFood.js";
 
 function SearchFood({ products, searchResult, addFoodToCart }) {
   const search = products.filter((food) => {
