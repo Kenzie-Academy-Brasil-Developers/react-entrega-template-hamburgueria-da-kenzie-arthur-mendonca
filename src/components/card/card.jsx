@@ -3,6 +3,7 @@ import { StyledSection } from "./card";
 import SearchFood from "../searchFood/searchFood.jsx";
 
 function Card({ products, addFoodToCart, searchResult }) {
+  console.log(products);
   return (
     <StyledSection>
       {searchResult !== [] ? (
