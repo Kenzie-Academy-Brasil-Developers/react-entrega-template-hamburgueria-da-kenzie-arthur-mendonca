@@ -9,6 +9,7 @@ import Cart from "./components/cart/cart.jsx";
 import { ToastContainer } from "react-toastify";
 import { ToastySuccess } from "./components/Toastify/Toastify";
 import { ToastInfo } from "./components/Toastify/ToastifyDelete";
+import { ToastCannotAdd } from "./components/Toastify/ToastifyWarning";
 
 function App() {
   const [products, setProducts] = useState([]); // lista de produtos recebida pela API
@@ -20,7 +21,9 @@ function App() {
     if (!currentSale.find((food) => food.id === element.id)) {
       setCurrentSale([...currentSale, element]);
       setCartTotal(cartTotal + element.price);
-      ToastySuccess(element.name);
+      // ToastySuccess(element.name);
+    } else {
+      ToastCannotAdd(element.name);
     }
   }
 
@@ -32,9 +35,9 @@ function App() {
       .find((food) => food.name);
 
     console.log(subtractedName.name);
-    ToastInfo(`Você removeu ${subtractedName.name}`);
+    // ToastInfo(`Você removeu ${subtractedName.name}`);
     setCartTotal(cartTotal - subtract.price);
-    return setCurrentSale(filtered);
+    setCurrentSale(filtered);
   }
 
   useEffect(() => {
